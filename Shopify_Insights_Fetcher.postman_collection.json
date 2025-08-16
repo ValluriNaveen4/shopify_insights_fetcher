@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "Shopify Insights-Fetcher",
+    "_postman_id": "c0a1f0ab-1234-5678-90ab-demo",
+    "description": "Collection to demo /scrape and /competitors endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Scrape brand",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"website_url\": \"https://memy.co.in\"}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/scrape",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "scrape"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Competitors (Bonus)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/competitors?website=https://memy.co.in",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "competitors"
+          ],
+          "query": [
+            {
+              "key": "website",
+              "value": "https://memy.co.in"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
