@@ -1,0 +1,1 @@
+# shopify_insights_fetcher
